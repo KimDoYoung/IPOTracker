@@ -22,7 +22,7 @@ repositories {
 
 jar {
     manifest {
-        attributes "Main-Class": "kr.co.kfs.asseterp.ip.tracking.Main"
+        attributes "Main-Class": "kr.co.kfs.asseterp.ipo.tracking.Main"
     }
 
     from {
@@ -32,7 +32,7 @@ jar {
 
 task customFatJar(type: Jar) {
     manifest {
-        attributes 'Main-Class': "kr.co.kfs.asseterp.ip.tracking.Main"
+        attributes 'Main-Class': "kr.co.kfs.asseterp.ipo.tracking.Main"
     }
     archiveBaseName = 'all-in-one-jar'
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
