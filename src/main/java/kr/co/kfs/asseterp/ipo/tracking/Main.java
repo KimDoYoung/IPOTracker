@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 public class Main {
 	
 	private static final String START_URL = "https://www.38.co.kr/html/fund/index.htm?o=r";
-	private static final String FILE_PATH = "C:/Users/deHong/tmp/ipo.txt";
+	private static final String FILE_PATH = "C:/Users/KOREA/tmp/ipo.txt";
 	
     public static void main(String[] args) throws IOException {
         final Logger logger = LoggerFactory.getLogger(Main.class);
