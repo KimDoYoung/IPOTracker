@@ -5,6 +5,20 @@
 - IPO관련정보를 crawling해서 데이터를 가지고 온 후에 postgresq table에 넣는다.
 - crawling부분과 insertdb 두 부분으로 나누어서 작성된다.
 
+## 사용방법
+
+- Usage: java -jar IPOTracker <properties file>
+
+- properties file 내용
+```
+page.count=5
+output.folder=C:/Users/deHong/tmp
+db.url=jdbc:postgresql://localhost:5432/fbhdb
+db.username=kdy987
+db.password=kalpa987!
+db.tablename=public.ipo_data
+```
+
 ## info
 
 ```
@@ -18,7 +32,6 @@ https://www.38.co.kr/html/fund/index.htm?o=r
 
 2페이지
 https://www.38.co.kr/html/fund/index.htm?o=r&page=2
-
 https://www.38.co.kr/html/fund/?o=v&no=2028&l=&page=1
 https://www.38.co.kr/html/fund/?o=v&no=2029&l=&page=1
 ```
