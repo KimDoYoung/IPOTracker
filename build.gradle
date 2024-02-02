@@ -11,10 +11,12 @@ buildscript {
 plugins {
     id 'java'
     id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id "io.freefair.lombok" version "6.3.0"
 }
 
 group 'kr.co.kfs.asseterp.ipo.tracking'
 version '1.0-SNAPSHOT'
+compileJava.options.encoding = 'UTF-8'
 
 repositories {
     mavenCentral()
@@ -34,7 +36,7 @@ task customFatJar(type: Jar) {
     manifest {
         attributes 'Main-Class': "kr.co.kfs.asseterp.ipo.tracking.Main"
     }
-    archiveBaseName = 'all-in-one-jar'
+    archiveBaseName = 'IPOTracking'
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
@@ -49,16 +51,14 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     
-    // https://mvnrepository.com/artifact/org.jsoup/jsoup
+    // jsoup
 	implementation group: 'org.jsoup', name: 'jsoup', version: '1.17.2'
 	
-	// https://mvnrepository.com/artifact/org.postgresql/postgresql
+	// postgresql
 	implementation group: 'org.postgresql', name: 'postgresql', version: '42.7.1'
 	
-	// https://mvnrepository.com/artifact/org.projectlombok/lombok
+	// lombok
 	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
-	
-	
     
 }
 

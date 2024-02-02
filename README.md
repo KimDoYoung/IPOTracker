@@ -2,8 +2,12 @@
 
 ## 개요
 
-- IPO관련정보를 crawling해서 데이터를 가지고 온 후에 postgresq table에 넣는다.
+- IPO관련정보를 사이트 [https://www.38.co.kr/html/fund/index.htm?o=r](https://www.38.co.kr/html/fund/index.htm?o=r)에서 crawling해서 데이터를 가지고 온 후에 postgresq table에 넣는다.
 - crawling부분과 insertdb 두 부분으로 나누어서 작성된다.
+- gradle로 빌드
+```
+	./gradlew clean customFatJar
+```
 
 ## 사용방법
 
