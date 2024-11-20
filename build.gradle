@@ -18,6 +18,11 @@ group 'kr.co.kfs.asseterp.ipo.tracking'
 version '1.0-SNAPSHOT'
 compileJava.options.encoding = 'UTF-8'
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
 repositories {
     mavenCentral()
 }
